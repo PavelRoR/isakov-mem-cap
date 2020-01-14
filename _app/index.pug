@@ -1,0 +1,31 @@
+-var head_url = 'https://isakov.mastervision.su/memory-capabilities/';
+-var head_title = '«Возможности памяти. Прокачайте свою память за 3 дня с помощью простых техник»';
+-var head_description = 'Бесплатный 3-дневный онлайн-мастер-класс Ильи Исакова';
+-var head_img = 'img/banner.jpg';
+-var styles = 'css/styles.min.css';
+-var fav_ico = 'favicon.ico';
+-var fav_png = 'favicon.png';
+
+mixin b(cl,p)
+	.button-wrapper
+		button.button(class=cl data-toggle="modal" data-target="#Modal")=p
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		include pug/main/1.main.pug
+		include pug/main/2.for.pug
+		include pug/main/3.plan.pug
+		include pug/main/4.get.pug
+		include pug/main/5.author.pug
+		include pug/main/6.last.pug
+		include pug/main/7.footer.pug
+		include pug/main/8.modal.pug
+		include pug/main/9.politics.pug
+		include pug/main/10.scripts.pug
+		//- include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts
