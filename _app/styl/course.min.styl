@@ -1,0 +1,187 @@
+A = 'AvenirNextCyr', sans-serif;
+AB = 'AvenirNextCyrBold', sans-serif;
+BS = 'BloggerSans', sans-serif;
+BSB = 'BloggerSansBold', sans-serif;
+
+@font-face {
+	font-family: 'AvenirNextCyr';
+	src: url('../fonts/AvenirNextCyr.eot');
+	src: url('../fonts/AvenirNextCyr.eot') format('embedded-opentype'),
+		 url('../fonts/AvenirNextCyr.woff2') format('woff2'),
+		 url('../fonts/AvenirNextCyr.woff') format('woff'),
+		 url('../fonts/AvenirNextCyr.ttf') format('truetype'),
+		 url('../fonts/AvenirNextCyr.png#AvenirNextCyr') format('svg');
+	font-display: fallback;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AvenirNextCyrBold';
+	src: url('../fonts/AvenirNextCyrBold.eot');
+	src: url('../fonts/AvenirNextCyrBold.eot') format('embedded-opentype'),
+		 url('../fonts/AvenirNextCyrBold.woff2') format('woff2'),
+		 url('../fonts/AvenirNextCyrBold.woff') format('woff'),
+		 url('../fonts/AvenirNextCyrBold.ttf') format('truetype'),
+		 url('../fonts/AvenirNextCyrBold.png#AvenirNextCyrBold') format('svg');
+	font-display: fallback;
+	font-weight: bold
+	font-style: normal;
+}
+@font-face {
+	font-family: 'BloggerSans';
+	src: url('../fonts/BloggerSans.eot');
+	src: url('../fonts/BloggerSans.eot') format('embedded-opentype'),
+		 url('../fonts/BloggerSans.woff2') format('woff2'),
+		 url('../fonts/BloggerSans.woff') format('woff'),
+		 url('../fonts/BloggerSans.ttf') format('truetype'),
+		 url('../fonts/BloggerSans.png#BloggerSans') format('svg');
+	font-display: fallback;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'BloggerSansBold';
+	src: url('../fonts/BloggerSansBold.eot');
+	src: url('../fonts/BloggerSansBold.eot') format('embedded-opentype'),
+		 url('../fonts/BloggerSansBold.woff2') format('woff2'),
+		 url('../fonts/BloggerSansBold.woff') format('woff'),
+		 url('../fonts/BloggerSansBold.ttf') format('truetype'),
+		 url('../fonts/BloggerSansBold.png#BloggerSansBold') format('svg');
+	font-display: fallback;
+	font-weight: bold
+	font-style: normal;
+}
+
+@import '../_css/bootstrap.min.css'
+@import '../_css/flipclock.min.css'
+
+*
+	margin 0
+	padding 0
+	outline none
+body
+	background-color #fff
+	color #000
+	font-size: 18px
+	font-family: A
+	line-height: 1.56
+a
+	&:focus
+		text-decoration: none
+		outline: 0
+	&:hover
+		text-decoration none
+h1,h2,h3,h4,h5,h6
+	font-weight normal
+	margin 0
+button
+	border none
+section
+header
+footer
+	width 100%
+	display block
+.video-wrapper
+	margin 0 auto
+	position relative
+	width 100%
+	&:before
+		content ''
+		height 0
+		padding-top 56.25%
+		display block
+	&:after
+		content: ''
+		display block
+		position: absolute
+		top: 0
+		left 0
+		right 0
+		width: 100%
+		height 70px
+	img,
+	iframe
+		position absolute
+		width 100%
+		height 100%
+		display block
+		background-color #000
+		border-radius 0
+		border: 0
+		top 0
+		left 0
+		right 0
+		bottom 0
+		cursor pointer
+.button
+	display block
+	text-align: center
+	font-family: AB
+	text-transform: uppercase;
+	color #fff
+	box-shadow: 0px 4px 19.11px 1.89px rgba(180, 18, 135, 0.65);
+	padding 39px 10px
+	height: 96px;
+	border-radius: 47px
+	background-color: #CA0985
+	background-image linear-gradient(59deg, #b41287, #9c0f75)
+	transition: all .4s ease
+	width 100%
+	cursor pointer
+	position relative
+	z-index 9
+	&:focus
+		background-color: #CA0985
+		background-image linear-gradient(59deg, #b41287, #9c0f75)
+		color #fff
+	&:hover
+		border-color: #fff
+		background-color: #92065F
+		background-image none
+		color #fff
+		transform: translateY(5px)
+		box-shadow: 0px 4px 12px 1px rgba(180, 18, 135, 0.6);
+	&-wrapper
+		margin 0 auto
+		position relative
+		width 100%
+		max-width: 387px;
+		&:before
+			content: ''
+			display block
+			position: absolute
+			left 0
+			right 0
+			margin 0 auto
+			bottom: -4px
+			border-radius: 47px
+			height 50px
+			background-color: #92065F
+			transition: all .4s ease
+			width 90%
+			z-index -1
+.general-title
+	text-align: center
+	font-size: 30px;
+	font-family: AB
+	color: #000
+	line-height: 1.3
+	text-transform: uppercase;
+	margin: 0 0 46px
+	span
+		display: inline-block
+		color #fff
+		background-color: #D30A8B
+		padding 0 5px
+
+@import '0.header'
+@import 'course/1.main'
+@import 'course/2.results'
+@import 'course/3.for'
+@import 'course/4.technicks'
+@import 'course/5.plan'
+@import 'course/6.prices'
+@import 'course/7.author'
+@import 'course/8.records'
+@import 'course/9.footer'
+@import 'course/10.medias'

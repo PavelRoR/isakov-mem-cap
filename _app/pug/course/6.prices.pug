@@ -1,0 +1,74 @@
+-today_1 = '5 400р.';
+-today_2 = '10 900р.';
+-today_3 = '14 900р.';
+
+-sale_1 = '1 500р.';
+-sale_2 = '3 000р.';
+-sale_3 = '6 000р.';
+
+-link_1 = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=4440&clean=true&lg=ru';
+-link_2 = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=4444&clean=true&lg=ru';
+-link_3 = 'https://shop.mastervision.su/?r=ordering/cart/as1&id=4448&clean=true&lg=ru';
+
+section#prices
+	.container
+		h3.general-title Выберите 
+			span свой 
+			| &nbsp;вариант участия:
+		.row
+			.col-md-4.col-sm-4
+				.packet
+					.packet-head
+						h4.pachet-head-title
+							small пакет
+							| "Бронза"
+					.pachet-body
+					.packet-footer
+						p.cost.cost-full Стоимость:
+							span 6 900р.
+						p.cost.cost-sale Скидка:
+							span#sale-1=sale_1
+						p.cost.cost-today Стоимость сегодня:
+							span#today-1=today_1
+						+b('',link_1,'Выбрать','_blank','link-1')
+			.col-md-4.col-sm-4
+				.packet
+					.packet-head
+						h4.pachet-head-title
+							small пакет
+							| "Серебро"
+					.pachet-body
+					.packet-footer
+						p.cost.cost-full Стоимость:
+							span 13 900р.
+						p.cost.cost-sale Скидка:
+							span#sale2-=sale_2
+						p.cost.cost-today Стоимость сегодня:
+							span#today-2=today_2
+						+b('',link_2,'Выбрать','_blank','link-2')
+			.col-md-4.col-sm-4
+				.packet
+					.packet-head
+						h4.pachet-head-title
+							small пакет
+							| "Золото"
+					.pachet-body
+					.packet-footer
+						p.cost.cost-full Стоимость:
+							span 20 900р.
+						p.cost.cost-sale Скидка:
+							span#sale-3=sale_3
+						p.cost.cost-today Стоимость сегодня:
+							span#today-3=today_3
+						+b('',link_3,'Выбрать','_blank','link-3')
+		.prepayment
+			h4.prepayment-title Акция!!!
+			p.prepayment-text Платите 500р., бонусом получаете 
+				span#prepayment-bonus 500р. 
+				br
+				| На счет зачисляется 
+				span#prepayment-credited 1 000р.
+			+b('','https://shop.mastervision.su/?r=ordering/cart/as1&id=4452&clean=true&lg=ru','Оплатить 500р.','_blank','prepayment-link')
+		.timer
+			h4.timer-title Скидка уменьшится через:
+			.clock
