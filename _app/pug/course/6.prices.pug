@@ -19,10 +19,13 @@ section#prices
 			.col-md-4.col-sm-4
 				.packet
 					.packet-head
-						h4.pachet-head-title
+						h4.packet-head-title
 							small пакет
 							| "Бронза"
-					.pachet-body
+					.packet-body
+						h5.packet-body-title для сомневающихся и тех, кто хочет проверить технологии на себе и освоить необходимый минимум
+						p.packet-body-text 6 уроков
+							span.more-button(data-toggle="modal" data-target="#modal-1") подробнее
 					.packet-footer
 						p.cost.cost-full Стоимость:
 							span 6 900р.
@@ -30,14 +33,19 @@ section#prices
 							span#sale-1=sale_1
 						p.cost.cost-today Стоимость сегодня:
 							span#today-1=today_1
-						+b('',link_1,'Выбрать','_blank','link-1')
+						+b('button-cost',link_1,'Выбрать','_blank','link-1')
 			.col-md-4.col-sm-4
 				.packet
 					.packet-head
-						h4.pachet-head-title
+						h4.packet-head-title
 							small пакет
 							| "Серебро"
-					.pachet-body
+					.packet-body
+						h5.packet-body-title
+							span ВСЁ, что входит в пакет «Бронза» + Пакет «Серебро»
+							| для тех, кто не только хочет глубже изучить материал, но и прокачать своё внимание и концентрацию
+						p.packet-body-text 6 уроков
+							span.more-button(data-toggle="modal" data-target="#modal-2") подробнее
 					.packet-footer
 						p.cost.cost-full Стоимость:
 							span 13 900р.
@@ -45,14 +53,19 @@ section#prices
 							span#sale2-=sale_2
 						p.cost.cost-today Стоимость сегодня:
 							span#today-2=today_2
-						+b('',link_2,'Выбрать','_blank','link-2')
+						+b('button-cost',link_2,'Выбрать','_blank','link-2')
 			.col-md-4.col-sm-4
 				.packet
 					.packet-head
-						h4.pachet-head-title
+						h4.packet-head-title
 							small пакет
 							| "Золото"
-					.pachet-body
+					.packet-body
+						h5.packet-body-title
+							span ВСЁ, что входит в пакеты «Бронза» и «Серебро» + Пакет «Золото»
+							| для тех, кто хочет научиться запоминать любую информацию и быть готовым к любым ситуациям в жизни
+						p.packet-body-text 4 урока
+							span.more-button(data-toggle="modal" data-target="#modal-3") подробнее
 					.packet-footer
 						p.cost.cost-full Стоимость:
 							span 20 900р.
@@ -60,7 +73,7 @@ section#prices
 							span#sale-3=sale_3
 						p.cost.cost-today Стоимость сегодня:
 							span#today-3=today_3
-						+b('',link_3,'Выбрать','_blank','link-3')
+						+b('button-cost',link_3,'Выбрать','_blank','link-3')
 		.prepayment
 			h4.prepayment-title Акция!!!
 			p.prepayment-text Платите 500р., бонусом получаете 
