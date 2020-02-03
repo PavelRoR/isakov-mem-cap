@@ -130,7 +130,7 @@
                         class="contact contact-email" href="mailto:info@mastervision.su"
                         target="_blank">info@mastervision.su</a></div>
             </header>
-            <p class="pre">записи мастер-класса - внизу страницы</p>
+            <p class="pre hide">записи мастер-класса - внизу страницы</p>
             <p class="pre-title">обучающий курс</p>
             <h1 class="main-title">«Сверхпамять»</h1>
             <p class="main-info">Старт курса: <span>13 февраля, в 19:00 (мск)</span></p>
@@ -480,7 +480,7 @@
                         href="https://shop.mastervision.su/?r=ordering/cart/as1&amp;id=4452&amp;clean=true&amp;lg=ru"
                         target="_blank" id="prepayment-link">Оплатить 500р.</a></div>
             </div>
-            <div class="timer hide">
+            <div class="timer">
                 <h4 class="timer-title">Скидка уменьшится через:</h4>
                 <div class="clock"></div>
             </div>
@@ -513,7 +513,7 @@
             </div>
         </div>
     </section>
-    <section id="records">
+    <section id="records" class="hide">
         <div class="container">
             <?php if($now < $dates[3]){;?>
             <h3 class="general-title"> <span>Записи </span>&nbsp;мастер-класса</h3>
@@ -676,7 +676,9 @@
             </div>
         </div>
     </div>
-    <script src="../js/course.min.js"></script><!-- AutoWebOffice: UTM or OpenStat Counter-->
+    <script src="../js/course.min.js"></script>
+    <!-- BEGIN JIVOSITE CODE {literal} --><script src="//code.jivosite.com/widget.js" data-jv-id="UPm98E8VpR" async="async"></script><!-- {/literal} END JIVOSITE CODE -->
+    <!-- AutoWebOffice: UTM or OpenStat Counter-->
     <script type="text/javascript">
         var url = "https://shop.mastervision.su/?r=api/utmopenstat";
     </script>

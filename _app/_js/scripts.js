@@ -19,33 +19,30 @@ $(document).ready(function () {
             message = $('.alert-message', this),
             button = $('.button-form', this),
             switch_title = $('.switch-title'),
-            switch_text = $('.switch-text');
-        // modal_text = $('.modal-text'),
-        // last_container_title = $('.last-container-title'),
-        // currDate = new Date(),
-        // startDate = new Array(
-        //     new Date("January 22 2020 18:30 UTC+3"),
-        //     new Date("January 23 2020 18:30 UTC+3"),
-        //     new Date("January 24 2020 18:30 UTC+3")),
-        // endDate = new Array(
-        //     new Date("January 22 2020 21:00 UTC+3"),
-        //     new Date("January 23 2020 21:00 UTC+3"),
-        //     new Date("January 24 2020 21:00 UTC+3")),
-        // rooms = new Array(
-        //     '',
-        //     '',
-        //     '');
+            switch_text = $('.switch-text'),
+            currDate = new Date(),
+            startDate = new Array(
+                new Date("February 05 2020 18:30 UTC+3"),
+                new Date("February 06 2020 18:30 UTC+3"),
+                new Date("February 07 2020 18:30 UTC+3")),
+            endDate = new Array(
+                new Date("February 05 2020 21:00 UTC+3"),
+                new Date("February 06 2020 21:00 UTC+3"),
+                new Date("February 07 2020 21:00 UTC+3")),
+            rooms = new Array(
+                'https://start.bizon365.ru/room/18087/memory-capabilities_d1',
+                'https://start.bizon365.ru/room/18087/memory-capabilities_d2',
+                'https://start.bizon365.ru/room/18087/memory-capabilities_d3');
 
-        // function roomSwitch() {
-        //     $('.mail-container .col-md-6').removeClass('col-sm-6');
-        //     $('.mail-container-title').css('marginLeft', '0');
-        //     switch_title.html('А Вы записались на БЕСПЛАТНЫЙ ВЕБИНАР?<br>ЖДЕМ ТОЛЬКО ВАС!').css('lineHeight', '1.2');
-        //     switch_text.removeClass('hide').html('<span class="hurryup">Скорее ЗАХОДИТЕ прямо СЕЙЧАС на вебинар!</span><br>Присоединяйтесь к интенсиву и окунитесь в мир практической философии! Познайте этот мир и себя в нём!');
-        //     button.text('Зайти!');
-        // }
-        // if ((currDate > startDate[0] && currDate < endDate[0]) || (currDate > startDate[1] && currDate < endDate[1]) || (currDate > startDate[2] && currDate < endDate[2])) {
-        //     roomSwitch();
-        // }
+        function roomSwitch() {
+            $('.form-main').addClass('form-main-switch');
+            switch_title.html('А Вы записались на БЕСПЛАТНЫЙ ВЕБИНАР?<br>ЖДЕМ ТОЛЬКО ВАС!').css('lineHeight', '1.2');
+            switch_text.removeClass('hide').html('<span class="hurryup">Скорее ЗАХОДИТЕ прямо СЕЙЧАС на вебинар!</span><br>Присоединяйтесь к интенсиву и окунитесь в мир практической философии! Познайте этот мир и себя в нём!');
+            button.text('Зайти!');
+        }
+        if ((currDate > startDate[0] && currDate < endDate[0]) || (currDate > startDate[1] && currDate < endDate[1]) || (currDate > startDate[2] && currDate < endDate[2])) {
+            roomSwitch();
+        }
         $(".form").on("submit", function () {
             var check = $('.check', this),
                 message = $('.alert-message', this),
@@ -69,15 +66,15 @@ $(document).ready(function () {
                 return false;
             }
             if (email.val() && check) {
-                // if (currDate > startDate[0] && currDate < endDate[0]) {
-                //     window.open(rooms[0]);
-                // }
-                // if (currDate > startDate[1] && currDate < endDate[1]) {
-                //     window.open(rooms[1]);
-                // }
-                // if (currDate > startDate[2] && currDate < endDate[2]) {
-                //     window.open(rooms[2]);
-                // }
+                if (currDate > startDate[0] && currDate < endDate[0]) {
+                    window.open(rooms[0]);
+                }
+                if (currDate > startDate[1] && currDate < endDate[1]) {
+                    window.open(rooms[1]);
+                }
+                if (currDate > startDate[2] && currDate < endDate[2]) {
+                    window.open(rooms[2]);
+                }
                 button.text('Отправляем...');
                 setTimeout(function () {
                     button.text('Отправлено!');
